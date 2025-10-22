@@ -1,1 +1,1 @@
-console.log("Hola desde Node JS");
+console.log(Process.argv);
