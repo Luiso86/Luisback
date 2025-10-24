@@ -25,8 +25,7 @@ fetch('https://fakestoreapi.com/products', {
 if (method == 'GET' && resource.startsWith('product')) { 
     const id = parseInt(resource.split('/')[1]);
   if (isNaN(id) || id <= 0) {
-    console.log('El id debe ser un número válido');
-    return;
+    console.log('El id debe ser un número válido');  
   }
 
  fetch('https://fakestoreapi.com/products/' + id)
