@@ -17,32 +17,32 @@ fetch('https://fakestoreapi.com/products', {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify(product)
 })
-  .then(response => response.json())
-  .then(data => console.log(data));
+  .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error('Error en POST:', err));
 }
 
-
 if (method == 'GET' && resource.startsWith('product')) { 
-    //const [, id] = resource.split('/')[1]; 
-    let id = resource.split('/')[1]; //obtener el id del recurso
-    id = parseInt(id);
-
-    if (isNaN(id) || id <= 0) {
-        console.log('El id debe ser un numero');
-    }
+    const id = parseInt(resource.split('/')[1]);
+  if (isNaN(id) || id <= 0) {
+    console.log('El id debe ser un número válido');
+    return;
+  }
 
  fetch('https://fakestoreapi.com/products/' + id)
   .then(response => response.json())
-  .then(data => console.log(data));
+  .then(data => console.log(data))
+  .catch(err => console.error('Error en GET:', err));
+
 }
 if (method == 'DELETE' && resource.startsWith('products/')) {
   const id = parseInt(resource.split('/')[1]);
 
-  fetch('https://fakestoreapi.com/products/ ${id}', {
+  fetch(`https://fakestoreapi.com/products/${id}`, {
     method: 'DELETE'
   })
     .then(response => response.json())
-    .then(data => console.log(data));
+  .then(data => console.log(data))
+  .catch(err => console.error('Error en DELETE:', err));
 }
 
-// video 7/10  1:04
