@@ -7,9 +7,12 @@ Este script permite interactuar con la API de FakeStore para crear, consultar y 
 
 Funcionalidades implementada:
 
- method.toUpperCase() y resource.toLowerCase() -Normaliza el método y el recurso para evitar errores por mayúsculas/minúscula
- POST /products -Crea un nuevo producto con title, price y category
+ method.toUpperCase() y resource.toLowerCase() -Normaliza el método y el recurso para evitar errores por mayúsculas/minúscula,
+
+ POST /products -Crea un nuevo producto con title, price y category,
+
  GET /product/:id -Consulta un producto específico por su ID.
+ 
  DELETE /products/:id -Elimina un producto por su ID.
 
 Tecnologias utilizadas
