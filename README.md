@@ -13,9 +13,13 @@ Funcionalidades implementada:
  DELETE /products/:id -Elimina un producto por su ID.
 
 Tecnologias utilizadas
-Node.js
-fetch para realizar peticiones HTTP
-Destructuring de arrays (process.argv)
+
+Node.js,
+
+fetch para realizar peticiones HTTP,
+
+Destructuring de arrays (process.argv),
+
 Manejo de errores con .catch()
 
 
